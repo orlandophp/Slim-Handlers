@@ -14,9 +14,9 @@ I want that in PHP.
 
 require_once 'vendor/autoload.php';
 
-\Slim\Handlers::app($app = new \Slim\Slim());
+\Slim\Handlers\Handler::app($app = new \Slim\Slim());
 
-$app->map('/some/route', \Slim\Handlers::handler('SomeHandler'));
+$app->map('/some/route', \Slim\Handlers\Handler::factory('SomeHandler'));
 
 $app->run();
 
@@ -35,4 +35,4 @@ class SomeHandler extends \Slim\Handlers\Handler
 }
 ```
 
-In our super-simple example, the Slim application will respond to `GET /some/route` and `POST /some/route` but not `PUT`, `DELETE` or other requests. Note that the application instance is available as a property of the Handler for convenience. The Handler methods correspond to the HTTP verb they serve, and the `\Slim\Handlers::handler()` static method acts as a factory for instantiating a callable instance of `\Slim\Handlers\Handler`.
+In our super-simple example, the Slim application will respond to `GET /some/route` and `POST /some/route` but not `PUT`, `DELETE` or other requests. Note that the application instance is available as a property (`$this->app`) of the Handler for convenience. The Handler methods correspond to the HTTP verb they serve, and the `\Slim\Handlers\Handler::factory()` static method is a factory (derr) for instantiating a callable.
