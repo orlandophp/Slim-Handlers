@@ -1,0 +1,29 @@
+{
+  "name": "OrlandoPHP/Slim-Handlers",
+  "description": "An implementation of the `webapp.RequestHandler` pattern in PHP for Slim Framework (slim/slim)",
+  "version": "0.1.0-dev",
+  "type": "library",
+  "keywords": [ "rest", "framework" ],
+  "homepage": "https://gituhb.com/OrlandoPHP/Slim-Handlers",
+  "license": "MIT",
+  "authors": [
+    { "name": "David Rogers",
+      "email": "david@orlandophp.org",
+      "homepage": "http://orlandophp.org/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/OrlandoPHP/Slim-Handlers/issues",
+    "wiki": "https://github.com/OrlandoPHP/Slim-Handlers/wiki"
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "slim/slim": "2.*"
+  },
+  "autoload": {
+    "psr-0": {
+      "Slim\Handlers": "lib/"
+    }
+  }
+}
